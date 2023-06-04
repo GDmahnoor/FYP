@@ -1,0 +1,164 @@
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+
+class LoginScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    var scaffold = Scaffold(
+      appBar: AppBar (
+        backgroundColor: Color.fromRGBO(87, 42, 149, 1),
+        leading: Builder(
+          builder: (context) {
+            return IconButton(icon: const Icon(Icons.arrow_back), 
+            onPressed: () =>exit(0),);
+          }
+        ),
+      ),
+      body: SingleChildScrollView(
+        
+        child: Container(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(height: 80.0),
+              Image.asset(
+                'assets/images/virlogo.png',
+                width: 120.0,
+              ),
+              const SizedBox(height: 20.0),
+              const Text(
+                'Log in to continue',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 40.0),
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  prefixIcon: Icon(
+                    Icons.mail,
+                    color: Color.fromRGBO(87, 42, 149, 1),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 20.0),
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Password',
+                  prefixIcon: Icon(
+                    Icons.lock,
+                    color: Color.fromRGBO(87, 42, 149, 1),
+                  ),
+                ),
+                obscureText: true,
+              ),
+              const SizedBox(height: 10.0),
+              const Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  'Forgot password',
+                  style: TextStyle(
+                    color: Color.fromRGBO(87, 42, 149, 1),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 40.0),
+              ElevatedButton(
+                onPressed: () {
+                  // TODO: Add login button functionality
+                },
+                style: ElevatedButton.styleFrom(
+                  primary:Color.fromRGBO(87, 42, 149, 1),
+                  onPrimary: Colors.white,
+                  minimumSize: const Size(double.infinity, 50.0),
+                ),
+                child: const Text('Login'),
+              ),
+              const SizedBox(height: 20.0),
+              Row(
+                children: [
+                  Expanded(child: Divider(color: Colors.grey)),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10.0),
+                    child: Text(
+                      'OR',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
+                  const Expanded(child: Divider(color: Colors.grey)),
+                ],
+              ),
+              const SizedBox(height: 20.0),
+              const Text('Login with'),
+              const SizedBox(height: 10.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      // TODO: Add Google login button functionality
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: const Icon(
+                        Icons.email,
+                        color:Color.fromRGBO(87, 42, 149, 1),
+                        size: 30.0,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 20.0),
+                  GestureDetector(
+                    onTap: () {
+                      // TODO: Add Facebook login button functionality
+                    },
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(5.0),
+                      ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: const Icon(
+                        Icons.facebook,
+                        color:Color.fromRGBO(87, 42, 149, 1),
+                        size: 30.0,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 20.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text("Don't have an account? "),
+                  GestureDetector(
+                    onTap: () {
+                      // TODO: Add signup button functionality
+                    },
+                    child: const Text(
+                      'Signup',
+                      style: TextStyle(
+                        color: Color.fromRGBO(87, 42, 149, 1),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+    return scaffold;
+    
+  }}
