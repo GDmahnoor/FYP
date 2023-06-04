@@ -1,0 +1,85 @@
+import 'package:flutter/material.dart';
+import '../widgets/elevated_buttons.dart';
+
+class signup extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Container(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(height: 80.0),
+              Image.asset(
+                'assets/images/virlogo.png',
+                width: 120.0,
+              ),
+              const SizedBox(height: 20.0),
+              const Text(
+                'Sign Up your Account',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              const SizedBox(height: 40.0),
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'UserName',
+                  prefixIcon: Icon(
+                    Icons.person,
+                    color: Color.fromRGBO(87, 42, 149, 1),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 40.0),
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Password',
+                  prefixIcon: Icon(
+                    Icons.lock,
+                    color:Color.fromRGBO(87, 42, 149, 1),
+                  ),
+                ),
+                obscureText: true,
+              ),
+             const SizedBox(height: 40.0),
+              TextFormField(
+                decoration: const InputDecoration(
+                  labelText: 'Email',
+                  prefixIcon: Icon(
+                    Icons.lock,
+                    color:Color.fromRGBO(87, 42, 149, 1),
+                  ),
+                ),
+                obscureText: true,
+              ),
+             
+              const SizedBox(height: 40.0),
+              ElevatedButton(
+                
+                onPressed: () {
+                  // TODO: Add login button functionality
+                },
+                style: ElevatedButton.styleFrom(
+                  primary:Color.fromRGBO(87, 42, 149, 1),
+                  onPrimary: Colors.white,
+                  minimumSize: const Size(double.infinity, 50.0),
+                ),
+                child: const Text('SignUp'),
+              ),
+              const SizedBox(height: 20.0),
+              Row(
+               
+              ),
+            ]
+             
+                      ),
+                    ),
+                  ),
+            
+              );
+        
+  }}
